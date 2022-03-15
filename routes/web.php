@@ -24,8 +24,12 @@ Route::get('/usuarios','UsuariosController@index')->name('usuarios');
 Route::get('/categorias','CategoriasController@index')->name('categorias');
 Route::get('/categorias/create','CategoriasController@create')->name('categorias.create');
 Route::get('/categorias/edit/{cat_id}','CategoriasController@edit')->name('categorias.edit');
+Route::Post('/categorias/update/{cat_id}','CategoriasController@update')->name('categorias.update');
+
 Route::get('/usuarios/create','UsuariosController@create')->name('usuarios.create');
 
 Route::Post('/categorias/store','CategoriasController@store')->name('categorias.store');
 
 Route::Post('/usuarios/store','UsuariosController@store')->name('usuarios.store');
+
+Route::Post('/categorias/destroy/{cat_id}','CategoriasController@destroy')->name('categorias.destroy');

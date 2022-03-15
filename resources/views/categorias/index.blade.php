@@ -17,8 +17,17 @@ Nuevo</a>
 		<td>{{$cat->cat_tipo}}</td>
 	</td>
 	<td>
+		<div class="row">
+			
 	     <a href="{{route('categorias.edit',$cat->cat_id)}} " class="btn btn-primary">Editar</a>
-	     <a href="" class="btn btn-primary">Eliminar</a>
+	     
+	     <form action="{{route('categorias.destroy',$cat->cat_id)}}" method="POST" onsubmit="return-confirm('desa eliminar?')">
+	     	@csrf
+	     	<button>Eliminar</button>
+	     </form>
+
+		</div>
+
 	 </td>
 	</tr> 
 	@endforeach
