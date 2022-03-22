@@ -28,6 +28,7 @@
               @else
 <a class="btn btn-primary" href="{{route('usuarios') }}">usuarios</a>
 <a class="btn btn-primary" href="{{route('categorias') }}">Categorias</a>
+<a class="btn btn-primary" href="{{route('movimientos') }}">movimientos</a>
               @endguest
                    
               

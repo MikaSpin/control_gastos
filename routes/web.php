@@ -33,3 +33,7 @@ Route::Post('/categorias/store','CategoriasController@store')->name('categorias.
 Route::Post('/usuarios/store','UsuariosController@store')->name('usuarios.store');
 
 Route::Post('/categorias/destroy/{cat_id}','CategoriasController@destroy')->name('categorias.destroy');
+
+Route::get('/movimientos','MovimientosController@index')->name('movimientos');
+
+Route::get('/movimientos/create','MovimientosController@create')->name('movimientos.create');
