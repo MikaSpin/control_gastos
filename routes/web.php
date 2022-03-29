@@ -37,3 +37,9 @@ Route::Post('/categorias/destroy/{cat_id}','CategoriasController@destroy')->name
 Route::get('/movimientos','MovimientosController@index')->name('movimientos');
 
 Route::get('/movimientos/create','MovimientosController@create')->name('movimientos.create');
+
+Route::Post('/movimientos/store','MovimientosController@store')->name('movimientos.store');
+Route::get('/movimientos/edit/{mov_id}','MovimientosController@edit')->name('movimientos.edit');
+Route::Post('/movimientos/update/{mov_id}','MovimientosController@update')->name('movimientos.update');
+Route::Post('/movimientos/destroy/{mov_id}','MovimientosController@destroy')->name('movimientos.destroy');
+Route::Post('/home/search','HomeController@search')->name('home.search');

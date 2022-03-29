@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 use App\Categorias;
+use App\Movimientos;
+use Auth;
 use Illuminate\Http\Request;
 
 class MovimientosController extends Controller
@@ -35,7 +37,12 @@ class MovimientosController extends Controller
      */
     public function store(Request $request)
     {
-       
+       $data=$request->all();
+
+            $data['usu_id']=Auth::user()->usu_id;
+
+          Movimientos::create($data);
+          return redirect(route('home'));
     }
 
     /**
@@ -58,6 +65,9 @@ class MovimientosController extends Controller
     public function edit($id)
     {
         //
+        $movimientos=movimientos::find($id);
+        $categorias=Categorias::all();
+        return view('movimientos.edit')->with('movimientos',$movimientos)->with('categorias',$categorias);
     }
 
     /**
@@ -70,6 +80,9 @@ class MovimientosController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $mov=movimientos::find($id);
+        $mov->update($request->all());
+        return redirect(route('home'));
     }
 
     /**
@@ -81,5 +94,7 @@ class MovimientosController extends Controller
     public function destroy($id)
     {
         //
+        movimientos::destroy($id);
+        return redirect(route('home'));
     }
 }
