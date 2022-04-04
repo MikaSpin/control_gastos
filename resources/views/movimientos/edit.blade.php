@@ -8,7 +8,7 @@
 
 	<div class="" style="width:250px;margin-left: 40%;">
 		<label class="form-label">Nombre</label>
-		<input type="text" class="form-control" id="mov_nombre" value="{{$movimientos->mov_detalle}}" name="mov_nombre" required autocomplete="mov_nombre" autofocus aria-descmiribedby="emailHelp">
+		<input type="text" class="form-control" id="mov_nombre" value="{{$movimientos->mov_nombre}}" name="mov_nombre" required autocomplete="mov_nombre" autofocus aria-descmiribedby="emailHelp">
 
 	</div>	
 
@@ -35,7 +35,7 @@
 	@if($cat->cat_id==1)
     @else
     @endif
-    	<option selected value="{{$cat->cat_id}} "{{$cat->cat_nombre}} (Ingreso) </option>
+    	<option selected value="{{$cat->cat_id}} ">{{$cat->cat_nombre}} (Ingreso) </option>
     	@else
     	@if($cat->cat_tipo==1)
     	<option value="{{$cat->cat_id}} "> {{$cat->cat_nombre}} (Ingreso) </option>
