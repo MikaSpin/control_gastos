@@ -26,9 +26,9 @@
               @guest
               
               @else
-<a class="btn btn-primary" href="{{route('usuarios') }}">usuarios</a>
-<a class="btn btn-primary" href="{{route('categorias') }}">Categorias</a>
-<a class="btn btn-primary" href="{{route('home') }}">movimientos</a>
+<a class="btn btn-primary btn-sm" href="{{route('usuarios') }}">Usuarios</a>
+<a class="btn btn-primary btn-sm" style="margin-left: 1%;" href="{{route('categorias') }}">Categorias</a>
+<a class="btn btn-primary btn-sm" style="margin-left: 1%;" href="{{route('home') }}">Movimientos</a>
               @endguest
                    
               

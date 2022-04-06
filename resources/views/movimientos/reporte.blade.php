@@ -1,4 +1,5 @@
- <table class="table table-striped" >
+
+ <table class="table table-striped table-sm table-dark" >
                         <th>#</th>
                         <th>Responsable</th>
                         <th>Detalle</th>
@@ -35,18 +36,7 @@
         @endif 
                             <td>{{$mov->mov_fecha}}</td>
                             <td>{{number_format($mov->mov_valor,2)}} $</td>
-                            <td>
-                                <div class="row">
-                    
-            <a href="{{route('movimientos.edit',$mov->mov_id)}}" class="btn btn-primary">  Editar</a>
-        
-            <form  style="margin-left: 1%" action="{{route('movimientos.destroy',$mov->mov_id)}}" method="POST" onsubmit="return confirm('desea eliminar?')">
-            @csrf
-            <!-- <a href="" class="btn btn-danger">Eliminar</a> -->
-                <button class="btn btn-danger">eliminar</button>
-            </form>
-                </div>
-                            </td>
+                          
                         </tr>
                         
                     @endforeach   
