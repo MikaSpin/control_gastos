@@ -70,7 +70,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Iniciar Seccion</a>
+                        <a href="{{ route('login') }}">Iniciar Sesion</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Registrarse</a>
@@ -81,13 +81,16 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Control de Gastos
+                    <h1 style="font-size: 60pt; color: red;">CONTROL DE GASTOS</h1>
                 </div>
 
+                <div >
+                    <img style="width: 30%" src="https://i.pinimg.com/originals/9a/70/65/9a7065e2ef92333952377f6644b520e1.png" alt="">
+                </div>
+<br>
                 <div class="links">
                    
-                    <a href="https://github.com/laravel/laravel"  target="_blank">Bienvenidos </a>
-                    <a href="https://github.com/laravel/laravel"  target="_blank">Repositorio del Programa</a>
+                    <a style="color: red;" href="https://github.com/laravel/laravel"  target="_blank"> Bienvenidos al repositorio del Programa</a>
                 </div>
             </div>
         </div>

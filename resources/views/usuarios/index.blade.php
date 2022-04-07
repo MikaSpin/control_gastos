@@ -7,12 +7,16 @@
 		
 		<table class="table table-striped table-bordered ">
 	<th style="text-align:center;">#</th>
+	<th style="text-align:center;">nombre de usuario</th>
 	<th style="text-align:center;">nombre</th>
+	<th style="text-align:center;">apellido</th>
 	<th style="text-align:center;">cedula</th>
 	@foreach($users as $u)
 	<tr>
 		<td style="text-align:center;">{{$loop->iteration}}</td>
 		<td style="text-align:center;">{{$u->usu_usuario}}</td>
+		<td style="text-align:center;">{{$u->usu_nombre}}</td>
+		<td style="text-align:center;">{{$u->usu_apellido}}</td>
 		<td style="text-align:center;">{{$u->usu_cedula}}</td>
 	</tr>
 	@endforeach

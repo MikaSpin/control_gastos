@@ -27,9 +27,9 @@
                 </div> 
                     </div>
 
-                <div class="card-body">
+                <div class="card-body" style="overflow-y: scroll;">
 
-                    <table class="table table-striped" >
+                    <table class="table table-striped "  >
                         <th style="text-align: center;">#</th>
                         <th style="text-align: center;">Responsable</th>
                         <th style="text-align: center;">Detalle</th>

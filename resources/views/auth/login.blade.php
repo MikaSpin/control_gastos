@@ -5,12 +5,17 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="card-header">Sistema control de gastos</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
+                        <div>
+                            <h5 style="margin-left:30%; font-family: algeria; font-size: 34pt; color: ;">INICIAR SESION</h5>
+                        </div>
+                       <div class="form-group">
+                           <img style="width: 24%; margin-left: 40%;" src="https://i.pinimg.com/originals/9a/70/65/9a7065e2ef92333952377f6644b520e1.png" alt="">
+                       </div>
                         <div class="form-group row">
                             <label for="usu_cedula" class="col-md-4 col-form-label text-md-right">{{ __('Cedula') }}</label>
 
